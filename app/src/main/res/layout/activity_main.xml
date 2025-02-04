@@ -5,15 +5,236 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:background="@drawable/shape_list"
+        android:id="@+id/leyoutList"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textList"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:text="Список"
+            style = "@style/BaseText.List"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/icList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_down" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/leyoutList"
+        android:layout_marginTop="150dp"
+        style="@style/BaseText.Amount"
+        android:text="130.00"
+        android:background="@drawable/shape_amount"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAmount"
+        app:layout_constraintWidth_percent="0.8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textNumber1"
+                style="@style/BaseText.Number"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_number_bottom"
+                android:gravity="center"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/textNumber2"
+                style="@style/BaseText.Number"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_number_round"
+                android:gravity="center"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/textNumber3"
+                style="@style/BaseText.Number"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_number_bottom"
+                android:gravity="center"
+                android:text="3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textNumber4"
+                style="@style/BaseText.Number"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_number_bottom"
+                android:gravity="center"
+                android:text="4" />
+
+            <TextView
+                android:id="@+id/textNumber5"
+                style="@style/BaseText.Number"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_number_round"
+                android:gravity="center"
+                android:text="5" />
+
+            <TextView
+                android:id="@+id/textNumber6"
+                style="@style/BaseText.Number"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_number_bottom"
+                android:gravity="center"
+                android:text="6" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textNumber7"
+                style="@style/BaseText.Number"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_number_bottom"
+                android:gravity="center"
+                android:text="7" />
+
+            <TextView
+                android:id="@+id/textNumber8"
+                style="@style/BaseText.Number"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_number_round"
+                android:gravity="center"
+                android:text="8" />
+
+            <TextView
+                android:id="@+id/textNumber9"
+                style="@style/BaseText.Number"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_number_bottom"
+                android:gravity="center"
+                android:text="9" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textNumberPoint"
+                style="@style/BaseText.Point"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="." />
+
+            <TextView
+                android:id="@+id/textNumber0"
+                style="@style/BaseText.Number"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_number_left_right"
+                android:gravity="center"
+                android:text="0" />
+
+            <ImageView
+                android:id="@+id/textNumberBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_back" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintWidth_percent="0.8"
+        style = "@style/BaseText.Button"
+        android:text="Сохранить"
+        android:background="@drawable/shape_button_save"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+    </android.widget.Button>
+
+    <android.widget.Button
+        android:id="@+id/btnTable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintWidth_percent="0.8"
+        style = "@style/BaseText.Button"
+        android:text="Перейти к таблице"
+        android:background="@drawable/shape_button_save"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave">
+    </android.widget.Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
