@@ -13,7 +13,7 @@
         android:id="@+id/leyoutList"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:paddingHorizontal="20dp"
         android:paddingVertical="5dp"
         app:layout_constraintWidth_percent="0.8"
@@ -23,35 +23,60 @@
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center">
 
-        <TextView
-            android:id="@+id/textList"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="40dp"
-            android:text="Список"
-            style = "@style/BaseText.List"
-            android:gravity="center_vertical"/>
-
-        <ImageView
-            android:id="@+id/icList"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_down" />
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textList"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:text="Список"
+                style = "@style/BaseText.List"
+                android:gravity="center_vertical"/>
+
+            <ImageView
+                android:id="@+id/icList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_down" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:visibility="gone"
+                android:background="@drawable/shape_list_catagory"
+                android:id="@+id/textListCategory"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:text="Еда"
+                style = "@style/BaseText.List"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
     </LinearLayout>
 
     <TextView
         android:id="@+id/textAmount"
+        style="@style/BaseText.Amount"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/shape_amount"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:text="130.00"
+        android:layout_marginTop="280dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leyoutList"
-        android:layout_marginTop="150dp"
-        style="@style/BaseText.Amount"
-        android:text="130.00"
-        android:background="@drawable/shape_amount"
-        android:paddingBottom="10dp"
-        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.8" />
 
     <LinearLayout
@@ -197,12 +222,20 @@
                 android:gravity="center"
                 android:text="0" />
 
-            <ImageView
-                android:id="@+id/textNumberBack"
+            <LinearLayout
+                android:id="@+id/btnDelete"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/ic_back" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
